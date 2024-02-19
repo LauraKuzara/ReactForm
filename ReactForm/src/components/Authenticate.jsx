@@ -1,3 +1,10 @@
-export default function Authenticate() {
-    return <h2> Authenticated!</h2>
-} 
+import React from 'react';
+
+export default function Authenticate({ userData }) {
+return (
+    <div>
+    <h2>Authenticated!</h2>
+    {userData && <p>Welcome, {userData.username}!</p>}
+    </div>
+);
+}
