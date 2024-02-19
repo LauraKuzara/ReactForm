@@ -40,3 +40,62 @@
 .read-the-docs {
   color: #888;
 }
+
+.SignUpForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.SignUpForm h2 {
+  color: #333;
+}
+
+.SignUpForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.SignUpForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.SignUpForm button {
+  background-color: #61dafb;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add your custom styles for Authenticate */
+.Authenticate {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.Authenticate h2 {
+  color: #333;
+}
+
+.Authenticate p {
+  margin-bottom: 10px;
+}
+
+.Authenticate button {
+  background-color: #61dafb;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
