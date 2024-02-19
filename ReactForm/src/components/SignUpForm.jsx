@@ -2,7 +2,8 @@ import { useState } from 'react'
 
 
 
-export default function SignUpForm(setToken) {
+export default function SignUpForm({token, setToken}) {
+    // console.log(token);
 
     const [username, setUserName] = useState("");
     const [password, setPassword] = useState("");
@@ -10,10 +11,11 @@ export default function SignUpForm(setToken) {
 
     async function handleSubmit(event) {
         event.preventDefault();
+        console.log("unicorns");
 
         if (username.length < 8 || password.length < 8) {
             setError('Username and password must be at least 8 characters long.');
-            return;
+            console.log(setError);
         }
 
         try {
@@ -29,7 +31,10 @@ export default function SignUpForm(setToken) {
             }) 
             })
             const result = await response.json();
+            console.log(result);
             setToken(result.token)
+            console.log(token);
+            console.log(setToken);
         }
         catch (error) {
             setError(error.message);
@@ -40,7 +45,7 @@ export default function SignUpForm(setToken) {
     return (
         <div className="SignUpForm">
         <h2>Sign Up!</h2>
-        {error && <p>{error}</p>}
+        {error && <p>{error} Please try again</p>}
         <form onSubmit={handleSubmit}>
             <label>
             Username: <input value={username} onChange={(event) => setUserName(event.target.value)} />
