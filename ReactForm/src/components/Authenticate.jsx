@@ -5,6 +5,23 @@ export default function Authenticate({ token }) {
     const [successMessage, setSuccessMessage] = useState(null);
     const [userData, setUserData] = useState(null);
 
+    const handleClick = async () => {
+        try {
+        const response = await fetch('https://fsa-jwt-practice.herokuapp.com/authenticate', {
+            method: 'GET',
+            headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+            },
+        });
+        const result = await response.json();
+          setUserData(result.data); // Assuming the username is in the data property
+        setSuccessMessage(result.message);
+        } catch (error) {
+        setError(error.message);
+        }
+    };
+    
     useEffect(() => {
         async function fetchData() {
         try {
