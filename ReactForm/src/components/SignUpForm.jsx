@@ -37,22 +37,21 @@ export default function SignUpForm(setToken) {
     }
 
 
-    return ( 
-    <> <h2> Sign Up!</h2>
-
-    {error && <p>{error}</p>}
-
-    <form onSubmit={handleSubmit}>
-        <label>
-        Username: <input value= {username} onChange={(event) => setUserName(event.target.value)}/> 
-        </label>
-        <label>
-        Password: <input value = {password} onChange={(event) => setPassword(event.target.value)}/> 
-        </label>
-        <label>
-        <button> Submit</button>
-        </label>
-    </form>
-    </>
-    )
+    return (
+        <div className="SignUpForm">
+        <h2>Sign Up!</h2>
+        {error && <p>{error}</p>}
+        <form onSubmit={handleSubmit}>
+            <label>
+            Username: <input value={username} onChange={(event) => setUserName(event.target.value)} />
+            </label>
+            <label>
+            Password: <input value={password} onChange={(event) => setPassword(event.target.value)} />
+            </label>
+            <label>
+            <button>Submit</button>
+            </label>
+        </form>
+        </div>
+    );
 } 

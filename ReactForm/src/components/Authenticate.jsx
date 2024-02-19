@@ -46,14 +46,12 @@ export default function Authenticate({ token }) {
     }, [token]);
     
     return (
-        <>
-        <div>
-            <h2>Authenticated!</h2>
-            {userData && <p>Welcome, {userData.username}!</p>}
-            {successMessage && <p>{successMessage}</p>}
-            {error && <p>{error}</p>}
-            <button onClick={handleClick}>Authenticate Button</button>
+        <div className="Authenticate">
+        <h2>Authenticated!</h2>
+        {userData && <p>Welcome, {userData.username}!</p>}
+        {successMessage && <p>{successMessage}</p>}
+        {error && <p>{error}</p>}
+        <button onClick={handleClick}>Authenticate Button</button>
         </div>
-        </>
     );
     }
